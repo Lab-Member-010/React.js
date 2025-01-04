@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return <>
       <Header />
-      {/* <div className="container"> */}
+      <div className="container row">
         <div className="col-md-6">
           <input type="text" id="task" placeholder="Enter Task Title"/>
         </div>
@@ -24,7 +24,7 @@ class App extends Component {
           </select>
         </div>
         <div className="col-md-6"></div>
-      {/* </div> */}
+      </div>
     </>
   }
 }
