@@ -1,72 +1,32 @@
-export const data= [
+export const Data= [
     {
-        "Sno": 1,
-        "title": "Finish Report",
-        "date": "03/01/2025",
-        "priority": "2",
-        "isActive": true
+      title: "Task 1",
+      date: "10/12/2022",
+      priority: "Low",
+      status: "active",
     },
     {
-        "Sno": 2,
-        "title": "Grocery Shopping",
-        "date": "02/01/2025",
-        "priority": "3",
-        "isActive": false
+      title: "Task 2",
+      date: "15/12/2022",
+      priority: "High",
+      status: "active",
     },
     {
-        "Sno": 3,
-        "title": "Meeting with Team",
-        "date": "01/01/2025",
-        "priority": "1",
-        "isActive": true
+      title: "Task 3",
+      date: "14/12/2022",
+      priority: "Normal",
+      status: "active",
     },
     {
-        "Sno": 4,
-        "title": "Doctor Appointment",
-        "date": "31/12/2024",
-        "priority": "2",
-        "isActive": true
+      title: "Task 4",
+      date: "11/12/2022",
+      priority: "High",
+      status: "active",
     },
     {
-        "Sno": 5,
-        "title": "Gym Session",
-        "date": "30/12/2024",
-        "priority": "3",
-        "isActive": false
+      title: "Task 5",
+      date: "17/12/2022",
+      priority: "Normal",
+      status: "deactive",
     },
-    {
-        "Sno": 6,
-        "title": "Family Dinner",
-        "date": "29/12/2024",
-        "priority": "3",
-        "isActive": true
-    },
-    {
-        "Sno": 7,
-        "title": "Book Club Meeting",
-        "date": "28/12/2024",
-        "priority": "2",
-        "isActive": false
-    },
-    {
-        "Sno": 8,
-        "title": "Work on Project",
-        "date": "27/12/2024",
-        "priority": "1",
-        "isActive": true
-    },
-    {
-        "Sno": 9,
-        "title": "Call with Client",
-        "date": "26/12/2024",
-        "priority": "1",
-        "isActive": false
-    },
-    {
-        "Sno": 10,
-        "title": "Weekend Trip",
-        "date": "25/12/2024",
-        "priority": "3",
-        "isActive": true
-    }
-]
+  ];  
