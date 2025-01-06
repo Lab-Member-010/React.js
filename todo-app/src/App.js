@@ -24,7 +24,6 @@ const App = () => {
     const newTask = { title: taskName, priority, date: createdDate, status: "active" };
     setTaskList([...taskList, newTask]);
 
-    // Clear inputs
     taskNameRef.current.value = "";
     priorityRef.current.value = "";
   }; 
@@ -52,42 +51,27 @@ const App = () => {
       <div className="container mt-5">
         <div className="row">
           <div className="col-md-6">
-            <input
-              ref={taskNameRef}
-              placeholder="Enter Task Title"
-              type="text"
-              className="form-control"
-            />
+            <input ref={taskNameRef} placeholder="Enter Task Title" type="text" className="form-control"/>
           </div>
           <div className="col-md-6">
             <select ref={priorityRef} className="form-control">
               {priorityList.map((priority, index) => (
-                <option key={index} value={priority}>
-                  {priority}
-                </option>
+                <option key={index} value={priority}>{priority}</option>
               ))}
             </select>
           </div>
         </div>
         <div className="row mt-3">
           <div className="col-md-12">
-            <button className="btn btn-success" onClick={saveTask}>
-              Save
-            </button>
+            <button className="btn btn-success" onClick={saveTask}>Save</button>
           </div>
         </div>
         <div className="row mt-5">
           <div className="col-md-3">
-            <button
-              className="btn btn-success"
-              onClick={() => filterTasks("active")}
-            >
+            <button className="btn btn-success" onClick={() => filterTasks("active")}>
               Active ({taskList.filter((task) => task.status === "active").length})
             </button>
-            <button
-              className="btn btn-primary ml-3"
-              onClick={() => filterTasks("deactive")}
-            >
+            <button className="btn btn-primary ml-3" onClick={() => filterTasks("deactive")}>
               Deactive ({taskList.filter((task) => task.status === "deactive").length})
             </button>
           </div>
@@ -104,34 +88,18 @@ const App = () => {
           </thead>
           <tbody>
             {filteredTasks.map((task, index) => (
-              <tr
-                key={index}
-                style={{
-                  backgroundColor:
-                    task.priority === "High"
-                      ? "#FFA07A"
-                      : task.priority === "Normal"
-                      ? "#FFCC80"
-                      : "#ADD8E6",
-                }}
-              >
+              <tr key={index} style={{backgroundColor: task.priority === "High" ? "#FFA07A" : task.priority === "Normal" ? "#FFCC80" : "#ADD8E6" }}>
                 <td>{index + 1}</td>
                 <td>{task.title}</td>
                 <td>{task.date}</td>
                 <td>{task.priority}</td>
                 <td>
                   {task.status === "active" ? (
-                    <button
-                      onClick={() => changeTaskStatus("deactive", task.title)}
-                      className="btn btn-outline-danger"
-                    >
+                    <button onClick={() => changeTaskStatus("deactive", task.title)} className="btn btn-outline-danger">
                       Deactivate
                     </button>
                   ) : (
-                    <button
-                      onClick={() => changeTaskStatus("active", task.title)}
-                      className="btn btn-outline-success"
-                    >
+                    <button onClick={() => changeTaskStatus("active", task.title)} className="btn btn-outline-success">
                       Activate
                     </button>
                   )}
